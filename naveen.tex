@@ -15,6 +15,15 @@
 \usepackage{fancyhdr}
 
 
+\usepackage{ifthen}
+
+
+%%%%%%%%%%%%%%%  VARIABLES %%%%%%%%%%%%%%%
+\newboolean{bigdata}
+\setboolean{bigdata}{true}
+%\setboolean{bigdata}{false}
+
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -71,7 +80,6 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING-----------------
@@ -98,13 +106,13 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages} {\cplusplus, C, python, bash}
+
+    \resumeSubItem{Languages} {\cplusplus, C, python, \ifthenelse {\boolean{bigdata}} {Java, Scala,} {}  bash}
     \resumeSubItem{Platforms} {Linux(Windriver, Ubuntu), Unix(HP-UX, AIX, Solaris)}
     \resumeSubItem{Tools} {CMake, GNUMake, gdb}
     \resumeSubItem{Testing Frameworks} {Squish, GoogleTest, Cucumber}
     \resumeSubItem{Protocols} {CAN (Vehicle bus standard), FIX(Financial Information eXchange)}
     %\resumeSubItem{Others} {Test Driven Development, Agile, Multithreading, Qt, Mercurial, Git, sqlite, ComDB, Linux IPCs, awk, sed, valgrind, gperf, valgrind}
-
     
   \resumeSubHeadingListEnd
  
@@ -124,8 +132,17 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
           {Initial triaging/analysing of defects that are logged by farm testers to be assigned to right team. This needs a robust knowledge of the entire system and involves a lot of communication with various teams.}
         \resumeItem{Reprogramming Firmware}
           {Develop Reprogramming module which deals with installation and updates of Gen4 CommandCenter\texttrademark\ Display.}
+
+
+        \ifthenelse {\boolean{bigdata}} { 
+        \resumeItem{Statistical Analysis} 
+          {Designed experiments and developed statistical analysis for global weather, crop and nutrients to quantify and predict related risks using scala.} 
+        }
+        {}
+
+
       \resumeItemListEnd
-      \resumeSubHeadingEnvironmentAndTools{\cplusplus, Qt/QtCreatorIDE, python, bash, Multithreading, Agile, mercurial, git, CAN-protocol, sqlite-db, TestDrivenDevelopment(TDD), gtest, Squish(UI-Testing), Cucumber, gperf, valgrind, yum(package manager)}
+      \resumeSubHeadingEnvironmentAndTools{\cplusplus, Qt/QtCreatorIDE, python, \ifthenelse {\boolean{bigdata}} {Scala,} {}   bash, Multithreading, Agile, mercurial, git, CAN-protocol, sqlite-db, TestDrivenDevelopment(TDD), gtest, Squish(UI-Testing), Cucumber, gperf, valgrind, yum(package manager)}
 
     \resumeSubheading
       {Bloomberg}{Manhattan, NY}
@@ -170,6 +187,10 @@ Developing matlab model CVSD encoder/decoder for Bluetooth:
 
   \resumeSubHeadingListEnd
 
+
+
+
+
 \begin{comment}
 %-----------PROJECTS-----------------
 \section{Projects}
@@ -184,6 +205,8 @@ Developing matlab model CVSD encoder/decoder for Bluetooth:
       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
   \resumeSubHeadingListEnd
 \end{comment}
+
+
 
 %
 %--------PROGRAMMING SKILLS------------
