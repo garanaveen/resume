@@ -19,10 +19,6 @@
 
 
 %%%%%%%%%%%%%%%  VARIABLES %%%%%%%%%%%%%%%
-\newboolean{bigdata}
-%\setboolean{bigdata}{true}
-\setboolean{bigdata}{false}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -118,7 +114,7 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
 \section{Programming Skills}
   \resumeSubHeadingListStart
 
-    \resumeSubItem{Languages} {\cplusplus, Python, C, \ifthenelse {\boolean{bigdata}} {Java, Scala,}{} bash}
+    \resumeSubItem{Languages} {\cplusplus, Python, BrightScript, C, bash}
     \resumeSubItem{Platforms} {Linux(Windriver, Ubuntu), Unix(HP-UX, AIX, Solaris)}
     \resumeSubItem{Tools} {CMake, GNUMake, gdb}
     \resumeSubItem{Testing Frameworks} {Squish, GoogleTest, Cucumber}
@@ -134,9 +130,23 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
+      %
+      {Roku}{Austin, TX}
+      {Senior Software Engineer}{Feb 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Firmware Developer}
+          {Develop RokuOS that all the TVs/StreamingPlayers/SoundBars run on.}
+        \resumeItem{SmartHome CameraApp}
+          {Develop CameraApp that lets users watch the cameras on the big screen (TV).}
+
+
+      \resumeItemListEnd
+      \resumeSubHeadingEnvironmentAndTools{\cplusplus, Python, BrightScript, bash, Multithreading, git, gperf}
+
+    \resumeSubheading
       %https://www.deere.com/en/technology-products/precision-ag-technology/guidance/gen-4-premium-activation/
       {John Deere}{Des Moines, IA}
-      {Senior Software Engineer}{June 2012 - Present}
+      {Senior Software Engineer}{June 2012 - Jan 2021}
       \resumeItemListStart
         \resumeItem{Gen4 CommandCenter Displays}
           {Develop software for displays of the family of Autotrack guidance agriculture machines (like tractors) which farmers use for Precision Agriculture.}
@@ -146,15 +156,8 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
           {Develop a Reprogramming module which deals with installation and updates of Gen4 CommandCenter\texttrademark\ Display.}
 
 
-        \ifthenelse {\boolean{bigdata}} { 
-        \resumeItem{Statistical Analysis} 
-          {Designed experiments and developed statistical analysis for global weather, crop and nutrients to quantify and predict related risks using scala.} 
-        }
-        {}
-
-
       \resumeItemListEnd
-      \resumeSubHeadingEnvironmentAndTools{\cplusplus, Python, Qt/QtCreatorIDE, \ifthenelse {\boolean{bigdata}} {Scala,} {}   bash, Multithreading, Agile, mercurial, git, CAN-protocol, sqlite-db, TestDrivenDevelopment(TDD), gtest, Squish(UI-Testing), Cucumber, gperf, VTune, valgrind, yum(package manager)}
+      \resumeSubHeadingEnvironmentAndTools{\cplusplus, Python, Qt/QtCreatorIDE, bash, Multithreading, Agile, mercurial, git, CAN-protocol, sqlite-db, TestDrivenDevelopment(TDD), gtest, Squish(UI-Testing), Cucumber, gperf, VTune, valgrind, yum(package manager)}
 
     \resumeSubheading
       {Bloomberg}{Manhattan, NY}
@@ -175,25 +178,25 @@ Engineering %age as far as I remeber is 86% (Or is it 76%?). Figure it out when 
       \resumeItemListStart
         \resumeItem{Printer Firmware}
           {Develop firmware for Toshiba's vast range of Multi-Functional Peripherals(MFPs)  in  \cplusplus\ and WindriverLinux.}
-        \resumeItem{Onsite Coordinator}
-          {Was an active part of the architecture team at client location and communicated the requirements to the offshore team. (Was in this role for about a year.)}
-        \resumeItem{Integration}
-          {Integration of all three layers at the client location (Toshiba, Japan) by coordinating with all the teams.}
-        \resumeItem{MFPUtility Libraries}
-          {Develop algorithms/libraries specific to printers (like Magnification\%, Drawer selection, ExitTray selection, Staple/Duplex judgment.}
+%        \resumeItem{Onsite Coordinator}
+%          {Was an active part of the architecture team at client location and communicated the requirements to the offshore team. (Was in this role for about a year.)}
+        \resumeItem{Integration and Onsite Coordinator}
+          {Integration of all three layers at the client location (Toshiba, Japan) by coordinating with all the teams with onsite coordination between client and the offshore team.}
+%        \resumeItem{MFPUtility Libraries}
+%          {Develop algorithms/libraries specific to printers (like Magnification\%, Drawer selection, ExitTray selection, Staple/Duplex judgment.}
       \resumeItemListEnd
       \resumeSubHeadingEnvironmentAndTools{\cplusplus, Linux  IPCs,  Multithreading, Windriver  Linux,  PowerPC,  bash  scripting,  PVCS(version control), sqlite-db, awk, sed, valgrind}
 
-    \resumeSubheading
-      {Mindtree}{Bangalore, India}
-      {Internship Project}{Dec 2005 - Mar 2006}
-      \resumeItemListStart
-\begin{comment}
-Developing matlab model CVSD encoder/decoder for Bluetooth: 
-\end{comment}
-        \resumeItem{CVSD encode/decoder}
-          {Develop a MATLAB model for CVSD encoder/decoder (which is an Audio CODEC) as per Bluetooth CVSD specification and do the performance analysis to find the best parameters.}
-      \resumeItemListEnd
+%    \resumeSubheading
+%      {Mindtree}{Bangalore, India}
+%      {Internship Project}{Dec 2005 - Mar 2006}
+%      \resumeItemListStart
+%\begin{comment}
+%Developing matlab model CVSD encoder/decoder for Bluetooth: 
+%\end{comment}
+%        \resumeItem{CVSD encode/decoder}
+%          {Develop a MATLAB model for CVSD encoder/decoder (which is an Audio CODEC) as per Bluetooth CVSD specification and do the performance analysis to find the best parameters.}
+%      \resumeItemListEnd
       %\resumeSubHeadingEnvironmentAndTools{Matlab, Bluetooth CVSD spec/algorithms, CVS}
 
 
